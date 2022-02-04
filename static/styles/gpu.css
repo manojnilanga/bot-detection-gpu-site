@@ -1,0 +1,73 @@
+html {
+    background-color: white;
+}
+
+.red-text{
+    display: block;
+    margin: auto;
+    text-align: center;
+    color:red;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8em;
+    border: red solid;
+    border-width: 25px;
+    border-radius: 1em;
+    width: 6em;
+    margin-top: .5em;
+}
+
+img {
+    display: block;
+    max-height: 60%;
+    max-width: 60%;
+    margin: auto;
+    padding-bottom: 2em;
+}
+
+address {
+    color:white;
+    padding-left:88vmin;
+    padding-top:20vmin;
+    font-size:20px;
+}
+
+#search-bar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#search-text {
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 80%;
+    max-height: 80%;
+    font-size: 4rem;
+    border:grey solid;
+    border-width: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 9, 32);
+}
+
+.search-button {
+    border:rgb(0, 9, 32) solid;
+    background:rgb(0, 9, 32);
+    border-width: 6px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+button:hover {
+    animation-name:yessir;
+    animation-duration:60s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes yessir{
+    100% {
+        background-color:blue;
+    }
+}
