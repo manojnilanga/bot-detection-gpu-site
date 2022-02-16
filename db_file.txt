@@ -1,0 +1,29 @@
+installing postgres locally
+
+To reset the password if you have forgotten:
+ALTER USER user_name WITH PASSWORD 'new_password';
+
+sudo -u postgres psql postgres    -> to initial login
+sudo -u user_name psql db_name    <- syntax
+
+\l -> list all available dbs
+\c -> select a databse
+\dt -> get all tables
+create database dbname;
+
+
+---------------------------------- actual script
+
+create database gpu;
+\l
+\c gpu;
+
+CREATE TABLE ips (
+	id serial PRIMARY KEY,
+	ip VARCHAR ( 50 ) NOT NULL,
+	datetime TIMESTAMP NOT NULL
+);
+
+
+
+
