@@ -1,15 +1,20 @@
 installing postgres locally
-
-To reset the password if you have forgotten:
-ALTER USER user_name WITH PASSWORD 'new_password';
+https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart
+sudo apt update
+sudo apt install postgresql postgresql-contrib
 
 sudo -u postgres psql postgres    -> to initial login
 sudo -u user_name psql db_name    <- syntax
+
+To reset the password if you have forgotten/first time ??:
+ALTER USER user_name WITH PASSWORD 'new_password';
+ALTER USER postgres WITH PASSWORD 'postgres';
 
 \l -> list all available dbs
 \c -> select a databse
 \dt -> get all tables
 create database dbname;
+\q -> quit from postgresql
 
 
 ---------------------------------- actual script

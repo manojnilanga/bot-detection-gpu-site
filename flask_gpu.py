@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request
-import psycopg2 # on ubuntu, sudo apt-get install libpq-dev, pip install psycopg2
+import psycopg2 # on ubuntu, sudo apt-get install libpq-dev, pip install psycopg2 / sudo pip3 install Psycopg2
 from psycopg2 import sql
 from datetime import datetime, timedelta
 
