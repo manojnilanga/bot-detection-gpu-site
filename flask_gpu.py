@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request
-import psycopg2 # on ubuntu, sudo apt-get install libpq-dev, pip install psycopg2
+import psycopg2 # on ubuntu, sudo apt-get install libpq-dev, sudo pip install psycopg2/sudo pip install psycopg2-binary
 from psycopg2 import sql
 from datetime import datetime, timedelta
 
@@ -47,7 +47,7 @@ def check_bot(ip):
     conn.commit()
     print("Records inserted")
 
-    check_date_time = now - timedelta(seconds=5)
+    check_date_time = now - timedelta(seconds=6)
 
     query = sql.SQL("select * from ips where ip= %s and datetime > %s")
     cursor.execute(query, (ip, check_date_time))

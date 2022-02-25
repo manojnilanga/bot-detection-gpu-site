@@ -1,4 +1,16 @@
-installing postgres locally
+---------simple commands to install postgresql-----
+
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+sudo -u postgres psql postgres
+ALTER USER postgres WITH PASSWORD 'postgres';
+
+---------------------------------------------------
+
+installing postgres locally -->
+https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart
+sudo apt update
+sudo apt install postgresql postgresql-contrib
 
 To reset the password if you have forgotten:
 ALTER USER user_name WITH PASSWORD 'new_password';
