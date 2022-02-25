@@ -7,14 +7,16 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from threading import Thread
 
-url = "http://10.20.34.27:8080"
+url = "http://ec2-3-83-69-108.compute-1.amazonaws.com:8080/"
 
-driver = webdriver.Chrome('./chromedriver')
+try:
+    driver = webdriver.Chrome('./chromedriver')
+except:
+    driver = webdriver.Chrome()
+
 driver.get(url)
 
 time.sleep(2)
-
-# btn = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="search-bar"]/form/button')))
 
 for i in range(12):
     btn = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="search-bar"]/form/button')))
